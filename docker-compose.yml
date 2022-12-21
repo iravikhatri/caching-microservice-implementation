@@ -1,0 +1,16 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  mscache:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname: mscache
+    container_name: mscache
+    image: mscache:latest
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
